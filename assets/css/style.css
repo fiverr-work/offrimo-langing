@@ -1,0 +1,499 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+nav i {
+	vertical-align: middle;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited {
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+}
+
+input,
+textarea:focus {
+	outline: 0;
+}
+
+button:focus {
+	cursor: pointer;
+	outline: 0 !important;
+}
+
+li {
+	list-style: none;
+}
+
+@font-face {
+	font-family: "Montserrat-SemiBold";
+	src: url('../fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src: url('../fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "Montserrat-Bold";
+	src: url('../fonts/Montserrat/Montserrat-bold.ttf') format('truetype');
+}
+
+*,
+body {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 24px;
+	color: #606060;
+}
+
+b {
+	font-family: "Montserrat-Bold";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 18px;
+	color: inherit;
+}
+
+.title {
+	font-family: "Montserrat-SemiBold";
+	color: #2F80ED;
+	font-weight: 500;
+	font-size: 30px;
+	line-height: 30px;
+	margin-bottom: 36px;
+}
+
+.sub-title {
+	font-family: "Montserrat-SemiBold";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 17px;
+	color: #606060;
+	margin-bottom: 27px;
+}
+
+#side-menu {
+	-webkit-box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+	        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+}
+
+.nav-link {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	color: #606060;
+}
+
+body>section.container {
+	margin-top: 74px;
+	padding: 0;
+}
+
+.content {
+	padding: 54px 32px;
+}
+
+p.paragraph {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14.3px;
+	line-height: 17px;
+	color: #606060;
+}
+
+.paragraph b {
+	font-size: 14.3px !important;
+
+}
+
+/* Switche */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin: 0 10px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	border-radius: 50px;
+	-o-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	border-radius: 50px;
+	-o-transition: .4s;
+	transition: .4s;
+}
+
+input:checked+.slider {
+	background-color: #2196F3;
+}
+
+input:focus+.slider {
+	-webkit-box-shadow: 0 0 1px #2196F3;
+	        box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+
+
+/* Range Slider */
+
+.rangeslider,
+.rangeslider__fill {
+	display: block;
+	border-radius: 50px;
+}
+
+.rangeslider {
+	position: relative;
+}
+
+.rangeslider:after {
+	top: 50%;
+	left: 0;
+	right: 0;
+	content: '';
+	width: 100%;
+	height: 5px;
+	margin-top: -2.5px;
+	border-radius: 50px;
+	position: absolute;
+	background: #EDEDED;
+}
+
+.rangeslider--horizontal {
+	width: 100%;
+	height: 28px;
+}
+
+.rangeslider--vertical {
+	width: 5px;
+	min-height: 150px;
+	max-height: 100%;
+}
+
+.rangeslider__fill {
+	position: absolute;
+	background: #168AFB;
+}
+
+.rangeslider--horizontal .rangeslider__fill {
+	top: 0;
+	height: 100%;
+}
+
+.rangeslider--vertical .rangeslider__fill {
+	bottom: 0;
+	width: 100%;
+}
+
+.rangeslider__handle {
+	top: 50%;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	margin-top: -10px;
+	background: white;
+	position: absolute;
+	background: #168AFB;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.rangeslider__fill,
+.rangeslider__handle {
+	z-index: 1;
+}
+
+.rangeslider--horizontal .rangeslider__fill {
+	top: 50%;
+	height: 5px;
+	margin-top: -2.5px;
+}
+
+
+.recapitulatif p {
+	width: 100%;
+	text-align: center;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 18px;
+	color: #606060;
+}
+
+.recapitulatif p b {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.recapitulatif .price {
+	font-family: "Montserrat-SemiBold";
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: center;
+	display: block;
+	color: #168AFB;
+}
+
+.recapitulatif .home,
+.recapitulatif .calondar2,
+.recapitulatif .edit2 {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+
+.recapitulatif .home {
+	background-image: url("../img/home.svg");
+}
+
+.recapitulatif .calondar2 {
+	background-image: url("../img/calendar2.svg");
+}
+
+.recapitulatif .edit2 {
+	background-image: url("../img/edit2.svg");
+}
+
+.recapitulatif .heading {
+	margin-bottom: 120px;
+	margin-top: 12px;
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+	color: #3CCA86;
+}
+
+.recapitulatif button {
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 20px;
+	margin-left: auto;
+	display: block;
+}
+
+.recapitulatif .montant-credit {
+	position: relative;
+	width: 85px;
+	height: 352px;
+	background: #F2F2F2;
+	border-radius: 8px 8px 0px 0px;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+	color: #606060;
+	padding: 78px 10px 0 10px;
+	margin: 0 auto;
+}
+
+.recapitulatif .montant-credit b {
+	font-size: 12px;
+	font-family: "Montserrat-SemiBold";
+}
+
+.recapitulatif .montant-credit .sous-montant {
+	width: 98px;
+	position: absolute;
+	bottom: 0;
+	left: -6px;
+	right: 0;
+	font-size: 12px;
+	line-height: 14px;
+	color: white;
+	background: #168AFB;
+	border-radius: 8px 8px 0px 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.recapitulatif .my-card {
+	margin-bottom: 25px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	height: 115px;
+}
+
+.taux-endettement .counter {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 151px;
+	height: 141px;
+	background-image: url("../img/shape.svg");
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 43px;
+	color: #606060;
+	margin: 35px auto 0;
+}
+
+@media only screen and (max-width: 600px) {
+	.recapitulatif .heading {
+		margin-bottom: 30px;
+		font-size: 25px;
+		line-height: 28px;
+	}
+
+	.recapitulatif button {
+		margin: 0 auto;
+		max-width: 100%;
+	}
+
+	.recapitulatif .my-card {
+		margin-bottom: 25px;
+		margin-top: 25px;
+		height: 90px;
+	}
+
+	.taux-endettement .sous-titre,
+	.taux-endettement .sous-titre {
+		margin-top: 25px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #3CCA86;
+		;
+		color: #3CCA86;
+		width: auto;
+		display: inline-block;
+		font-weight: bold;
+	}
+
+	.title {
+		font-size: 25px;
+		line-height: 25px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.sub-title {
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.paragraph,
+	.paragraph b,
+	p,
+	b {
+		font-size: 12.3px !important;
+		text-align: center;
+	}
+	.recapitulatif div{
+		border: none !important;
+	}
+}
